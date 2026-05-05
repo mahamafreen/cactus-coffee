@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-cactus-dark: #2D342F;
+  --color-cactus-mid: #3F4A42;
+  --color-cactus-light: #5C6B5F;
+  --color-desert-sand: #F7F1EA;
+  --color-clay: #7A442E;
+  --color-copper: #D4A373;
+}
+
+@layer base {
+  body {
+    @apply bg-desert-sand text-cactus-dark font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.parallax-container {
+  overflow-x: hidden;
+}
+
+.glass-nav {
+  @apply bg-desert-sand/40 backdrop-blur-sm border-b border-cactus-dark/5;
+}
+
+.text-reveal {
+  @apply overflow-hidden;
+}
+
+.text-reveal span {
+  @apply inline-block;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-desert-sand;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cactus-dark/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cactus-dark/40;
+}
